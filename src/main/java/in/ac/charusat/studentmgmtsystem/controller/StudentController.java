@@ -1,5 +1,6 @@
 package in.ac.charusat.studentmgmtsystem.controller;
 
+
 import in.ac.charusat.studentmgmtsystem.model.Student;
 import in.ac.charusat.studentmgmtsystem.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,27 +9,24 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 public class StudentController {
 
     @Autowired
     StudentRepository studentRepository;
-//    List<Student> students = new ArrayList<>(
-//            Arrays.asList(
-//                    new Student(1, "Tom", "US"),
-//                    new Student(2, "Harry", "Canada"),
-//                    new Student(3, "Nick", "UK")
-//            )
-//    );
+    //List<Student> students = new ArrayList<>(
+     //    Arrays.asList(
+       //             new Student(1, "Tom", "US"),
+         //           new Student(2, "Harry", "Canada"),
+           //         new Student(3, "Nick", "UK")
+            //)
+   // );
 
     // Mappings - URL endpoints
     // Get the list of all student
     @GetMapping("/listStudents")
-    public List<Student> getAllStudents() {
-        return studentRepository.findAll();
-    }
+    public List<Student> getAllStudents() { return studentRepository.findAll(); }
 
     // Get the student information
     @GetMapping("/student/{id}")
